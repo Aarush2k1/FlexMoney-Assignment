@@ -24,7 +24,7 @@ app.set("views", viewsPath);
 app.use(express.static(publicDirectoryPath));
 
 // localhost:3000/
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index");
 });
 
