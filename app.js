@@ -2,7 +2,6 @@ require("./models/db");
 
 const path = require("path");
 const express = require("express");
-const hbs = require("hbs");
 const bodyparser = require("body-parser");
 
 const User = require("./models/userModel");
