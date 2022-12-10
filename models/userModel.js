@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const validator = require("validator");
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -11,41 +10,22 @@ const userSchema = new mongoose.Schema({
     trim: true,
     unique: true,
   },
-  password: {
-    type: String,
-    trim: true,
-  },
   phone: {
     type: String,
   },
   age: {
     type: Number,
-    validate(value) {
-      if (value < 18 && value > 65) {
-        throw new Error("Age Must Be Between 18-65");
-      }
-    },
+    required: true,
+  },
+  startDate: {
+    type: String,
+    required: true,
   },
   batch: {
     type: String,
   },
-  bank: {
-    type: String,
-  },
-  cardNumber: {
-    type: String,
-  },
-  cardHolder: {
-    type: String,
-  },
-  date: {
-    type: String,
-  },
-  cvv: {
-    type: String,
-  },
 });
 
-const User = mongoose.model("User", userSchema);
+const UserCollection = new mongoose.model("users", userSchema);
 
-module.exports = User;
+module.exports = UserCollection;

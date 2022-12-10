@@ -40,7 +40,5 @@ Data includes name, email, password, phone, age, Batch timing.
 5. Validity of one time payment is till last day of the month.
 6. User need to register and make payment again for booking a new slot.
 7. User cannot book more than one time in a month to avoid clash with other slot.
-8. Users are Indian citizen.
-9. 10 digit mobile no validation.
-10. The validation is done for the registration page only.
-11. Plain password is stored in the database.
+8. 10 digit mobile no validation.
+9. The validation is done for the registration page only.
